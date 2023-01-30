@@ -1,0 +1,74 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: arial;
+    margin: 0;
+}
+.fila {
+	display: flex;
+}
+.lateral {
+	flex: 25%;
+    background-color: lightgray;
+    border-right: 3px solid green;
+}
+.lateral div {
+	align-items: flex-end;    
+    width: 80%;
+    background-color: lightblue;
+    margin: auto;
+    padding: 5px;
+}
+.cuerpo {
+	flex: 75%;
+}
+.encabezado {
+	float: right;
+}
+#fotoperfil {
+	width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+.principal {
+	flex: 80%;
+    background-color: white;
+    padding: 10px
+}
+.formulario {
+	flex: 20%;
+    background-color: green;
+}
+.pie {
+	bottom: 0;
+    position: sticky;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+@media screen and (max-width: 700px) {
+   .fila {   
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  .lateral {
+    display: none;
+  }
+  .encabezado {
+  	margin: auto;
+    display: block;
+  }
+  ul {
+  	list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+  #fotoperfil {
+  	width: 300px;
+    height: 300px;
+    margin: auto;
+    display: block;
+  }
+}

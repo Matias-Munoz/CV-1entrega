@@ -1,0 +1,19 @@
+
+body {
+    background-color: darksalmon;
+    color: darkblue;
+    font-family: 'Sofia Sans', sans-serif;
+
+}
+
+h1 {
+    color: sienna;
+}
+
+label {
+    background-color: khaki;
+}
+
+.cajaResultados {
+    border: 2mm black;
+}
