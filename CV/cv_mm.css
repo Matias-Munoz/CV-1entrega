@@ -1,0 +1,116 @@
+/* CSS RESPONSIVE CREADO SIGUIENDO EL MÉTODO FLEX-BOX VISTO W3SCHOOL */
+
+/* MEDIA QUERY PARA PC (por default) */
+/* ===CONFIGURACIONES GENERALES=== */
+* {
+    box-sizing: border-box;         /*De esta forma padding no distorcionará width final*/
+}
+body {
+    margin: 0;                      /*Para ocupar la pantalla en su totalidad*/
+    font-family: 'Arimo', sans-serif;
+}
+h1 {
+    font-family: 'Comfortaa' cursive;
+}
+li {
+    font-style: italic;
+}
+
+/* ===DIVISIÓN DEL VIEWPORT EN DOS COLUMNAS=== */
+.fila {                             /*Clase creada para ordenar en columnas los flex-container*/
+    display: flex;
+}
+.izq {                              /*FLEX-CONTAINER: MENÚ LATERAL*/
+    flex: 25%;
+    background-color: lightgrey;
+    border-right: 3px solid green;
+}
+.der {                              /*FLEX-CONTAINER: ÁREA PRINCIPAL DE LA PÁGINA*/
+    flex: 75%;
+    background-color: lightgreen;
+}
+
+/* ===MENÚ LATERAL=== */
+.izq div {                          /*FLEX-ITEMS*/
+    width: 80%;
+    margin: auto;
+    padding-right: 1px;
+    padding-left: auto;
+    background-color: lightblue;
+}
+
+/* ===ENCABEZADO=== */
+.encab {
+    float: right;
+}
+.perfil {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    box-shadow: 1px 0 10px gray;
+}
+.perfil:hover .saludo {
+    display: block;
+}
+.perfil .saludo {
+    position: absolute;
+   
+    border-radius:  6px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+.saludo {
+    display: none;
+}
+
+/* ===SECCIÓN PRINCIPAL DE LA PÁGINA=== */
+.ppal {
+    flex: 80%;
+    padding: 10px;
+    background-color: white;
+}
+
+/* ===FORMULARIO LATERAL DERECHO=== */
+.contactar {
+    flex: 20%;
+    background-color: darkgreen;
+}
+
+/* ===PIE DE PÁGINA=== */
+.pie {
+    position: sticky;
+    bottom: 0;
+    padding: 1px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* MEDIA QUERY PARA SMARTPHONE */
+@media screen and (max-width: 480px) {
+    
+    .fila {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .izq {
+        display: none;
+    }
+    .encab {
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+    .perfil {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        display: block;
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+}
