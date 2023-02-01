@@ -52,28 +52,25 @@ li {
 
 /* ===ENCABEZADO=== */
 .encab {
-    float: right;
-    padding-left: 20px;
+    float: inline-start;
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .perfil {                           /*FOTO DE PERFIL*/
     width: 150px;
     height: 150px;
     margin-top: 20px;
+    margin-right: 20px;
     border-radius: 10px;
     box-shadow: 1px 0 10px gray;
 }
-.perfil:hover .saludo {             
-    display: block;
-}
-.perfil .saludo {
-    position: absolute;    
-    border-radius:  6px;
-    background-color: gray;
-    color: white;
-    text-align: center;
-}
-.saludo {
-    display: none;
+.datos-pers {                       /*TEXTO DEL ENCABEZADO*/
+    float: right;
+    position: relative;
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 /* ===SECCIÓN PRINCIPAL DE LA PÁGINA=== */
@@ -82,11 +79,38 @@ li {
     padding: 10px;
     background-color: white;
 }
+.descripcion {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+}
+.acordeon {                         /*ACORDEONES (DROPDOWNS)*/
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    background-color: gray;
+    color: white;
+    border-radius: 5px 20px 20px;
+}
+.acordeon-texto {
+    display: none;
+    position: relative;
+    padding: 10px;
+    background-color: rgb(207, 230, 195);
+    color: black;
+    z-index: 1;
+}
+.acordeon:hover .acordeon-texto {
+    display: block;
+}
 
 /* ===FORMULARIO LATERAL DERECHO=== */
-.contactar {
+.presupuesto {
     flex: 20%;
     background-color: rgb(82, 122, 107);
+    color: rgb(182, 230, 194);
+    text-align: center;
 }
 
 /* ===PIE DE PÁGINA=== */
@@ -112,12 +136,15 @@ li {
     .encab {
         margin: auto;
         display: block;
+        padding-left: 0;
+        padding-right: 0;
         text-align: center;
     }
     .perfil {
         width: 300px;
         height: 300px;
         margin: auto;
+        margin-top: 20px;
         display: block;
     }
     ul {
