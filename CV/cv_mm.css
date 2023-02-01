@@ -22,39 +22,51 @@ li {
 }
 .izq {                              /*FLEX-CONTAINER: MENÚ LATERAL*/
     flex: 25%;
-    background-color: lightgrey;
-    border-right: 3px solid green;
+    max-width: 350px;
+    background-image: linear-gradient(white, gray);
+    border-right: 5px solid rgb(67, 75, 14);
+    display: flex;
 }
 .der {                              /*FLEX-CONTAINER: ÁREA PRINCIPAL DE LA PÁGINA*/
     flex: 75%;
-    background-color: lightgreen;
+    background-color: rgb(176, 196, 176);
 }
 
 /* ===MENÚ LATERAL=== */
-.izq div {                          /*FLEX-ITEMS*/
-    width: 80%;
-    margin: auto;
-    padding-right: 1px;
-    padding-left: auto;
-    background-color: lightblue;
+.caja-contacto {                     /*FLEX-ITEMS*/
+    max-height: 230px;
+    min-height: 200px;
+    max-width: 300px;
+    min-width: 80%;
+    margin: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(82, 122, 107);
+    color: rgb(182, 230, 194);
+    border-radius: 5px 20px 20px;
+    overflow-x: auto;
+    top: 20px;
+    position: sticky;
 }
 
 /* ===ENCABEZADO=== */
 .encab {
     float: right;
+    padding-left: 20px;
 }
-.perfil {
+.perfil {                           /*FOTO DE PERFIL*/
     width: 150px;
     height: 150px;
-    margin: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
     box-shadow: 1px 0 10px gray;
 }
-.perfil:hover .saludo {
+.perfil:hover .saludo {             
     display: block;
 }
 .perfil .saludo {
-    position: absolute;
-   
+    position: absolute;    
     border-radius:  6px;
     background-color: gray;
     color: white;
@@ -74,7 +86,7 @@ li {
 /* ===FORMULARIO LATERAL DERECHO=== */
 .contactar {
     flex: 20%;
-    background-color: darkgreen;
+    background-color: rgb(82, 122, 107);
 }
 
 /* ===PIE DE PÁGINA=== */
@@ -82,7 +94,7 @@ li {
     position: sticky;
     bottom: 0;
     padding: 1px;
-    background-color: black;
+    background-color: rgb(2, 37, 23);
     color: white;
     text-align: center;
 }
