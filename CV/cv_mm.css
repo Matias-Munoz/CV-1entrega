@@ -61,7 +61,7 @@ li {
     padding-right: 50px;
     background-color: rgb(176, 196, 176);
 }
-.perfil {                           /*FOTO DE PERFIL*/
+.fotoperfil {                           /*FOTO DE PERFIL*/
     width: 150px;
     height: 150px;
     margin-top: 20px;
@@ -118,20 +118,39 @@ li {
 .acordeon:hover .acordeon-texto {
     display: block;
 }
-.galeria {                          /*PORTFOLIO (IMAGE GALLERY)*/
+.galeria {
+    display: flex;
+    width: auto;
+    flex: 80%;
     overflow-x: scroll;
 }
+div.foto {
+    display: inline;
+    float: left;
+    width: auto;
+    margin: 5px;
+}
+div.epigrafe {
+    padding: 15px;
+    text-align: center;
+}
+
+
 
 /* ===FORMULARIO LATERAL DERECHO=== */
 .form-der {
+    flex: 20%;
     position: sticky;
     justify-content: stretch;
-    display: flex;
+    
     min-width: 5%;
     max-width: 25%;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: white;
+}
+.boton-form {
+    writing-mode: vertical-lr;
 }
 #desplegable {
     display: flex;
@@ -156,8 +175,12 @@ li {
     text-align: left;
     overflow: hidden;
 }
-#nombre, #obs, #correo, #tipop {
+#nombre, #obs, #correo, #tipop, #superf {
     width: 100%;
+    border-style: none none solid none;
+    border-bottom: 4px solid rgb(144, 172, 43);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 2px 2px 5px darkolivegreen;
 }
 #obs {
     overflow-y: scroll;
@@ -175,7 +198,6 @@ li {
 
 /* MEDIA QUERY PARA SMARTPHONE */
 @media screen and (max-width: 480px) {
-    
     .fila {
         flex-direction: column;
         flex-wrap: wrap;
@@ -185,12 +207,15 @@ li {
     }
     .encab {
         margin: auto;
-        display: block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         padding-left: 0;
         padding-right: 0;
         text-align: center;
     }
-    .perfil {
+    .fotoperfil {
         width: 300px;
         height: 300px;
         margin: auto;

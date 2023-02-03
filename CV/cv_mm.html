@@ -16,11 +16,11 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- NOTA: Datos ficticios tomados de RANDOMUSER -->
+<!-- NOTA: Datos ficticios tomados de RANDOMUSER -->
 
     <div class="fila">
-        <!-- COLUMNA IZQUIERDA: MENÚ LATERAL -->
-        <div class="izq">
+
+        <div class="izq"> <!-- INICIO COLUMNA IZQUIERDA --> <!-- INICIO MENÚ LATERAL IZQUIERDO -->
             <div class="caja-contacto" style="align-items:center">
                 <p><b>CONTACTO</b></p>
                 <p style="padding-left: 10px;"> <span class="material-symbols-outlined">call</span>
@@ -29,15 +29,15 @@
                        harry.lane@example.com</p>
                 <p style="padding-left: 10px;"> <span class="material-symbols-outlined">business_center</span>
                        blog.harry-lane-architect.com</p>
-            </div>
-        </div>
-
-        <!-- COLUMNA DERECHA: ÁREA PRINCIPAL -->
-        <div class="der">
-            <div class="fila">
-                <!-- ENCABEZADO -->
-                <div class="encab">
-                    <img src="https://randomuser.me/api/portraits/lego/7.jpg" alt="Foto de perfil de Harry Lane" class="perfil">
+            </div> <!-- FIN MENÚ LATERAL IZQUIERDO -->
+            
+        </div> <!-- FIN COLUMNA IZQUIERDA -->
+            
+        <div class="der"> <!-- INICIO COLUMNA DERECHA (ENCABEZADO + CONTENIDO + FORMULARIO) -->
+            
+            <div class="fila"> <!-- INICIO ENCABEZADO -->
+                <div class="encab"> 
+                    <img src="https://randomuser.me/api/portraits/lego/7.jpg" alt="Foto de perfil de Harry Lane" class="fotoperfil">
                     <div class="datos-pers">
                         <h1> Harry <b>Lane</b></h1>
                         <ul>
@@ -47,55 +47,46 @@
                         </ul>
                     </div>
                 </div>
-            </div>                
-            <div class="fila">
-                <!-- CUERPO PRINCIPAL -->
-                <div class="ppal">
+            </div> <!-- FIN ENCABEZADO -->    
+
+            <div class="fila"> <!-- INICIO CUERPO PRINCIPAL (BAJO ENCABEZADO)-->
+                
+                <div class="ppal"> <!-- INICIO COLUMNA 1: CONTENIDO -->
+                    
                     <h1 class="secciones">Perfil</h1>
-                    <div class="fila">
-                        <!-- DROPDOWNS -->
-                        <div class="descripcion">
-                            <div class="acordeon">
-                                <h3>Experiencia</h3>
-                                <div class="acordeon-texto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
+                    <div class="descripcion"> <!-- INICIO DROPDOWNS -->
+                        <div class="acordeon"><h3>Experiencia</h3>
+                            <div class="acordeon-texto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                            <br>
-                            <div class="acordeon">
-                                <h3>Skills</h3>
-                                <div class="acordeon-texto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
+                        </div><br>
+
+                        <div class="acordeon"><h3>Skills</h3>
+                            <div class="acordeon-texto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                            <br>
-                            <div class="acordeon">
-                                <h3>Educación</h3>
-                                <div class="acordeon-texto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
+                        </div><br>
+                    
+                        <div class="acordeon"><h3>Educación</h3>
+                            <div class="acordeon-texto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="galeria">
-                        <h1 class="secciones">Portfolio</h1>
-                        <div class="fila">
-                            <!-- PORTFOLIO -->
+                    </div> <!-- FIN DROPDOWNS -->
 
-
-                        </div>
-                    </div>
-                </div>
-                <!-- FORMULARIO LATERAL DERECHO -->
-                <div class="form-der">
+                    
+                    
+                </div> <!-- FIN COLUMNA 1: CONTENIDO -->
+                
+                <div class="form-der"> <!-- INICIO COLUMNA 2: FORMULARIO DERECHO -->
                     <button type="button" id="desplegable">
-                        <span style="writing-mode: vertical-lr">¡Click aquí para presupuestar su proyecto!</span>
+                        <span class="boton-form">¡Click aquí para presupuestar su proyecto!</span>
                         <div id="campos">
                             <p>Por favor, complete el formulario y en breve un miembro de nuestro equipo se contactará con usted.</p><br>
                             <form action="" method="post" target="_top">
                                 <label for="nombre">Nombre/Empresa:</label><br>
                                     <input type="text" id="nombre" placeholder="Ingresar nombre de contacto"><br><br>
-                                <label for="correo" id="correo">Correo electrónico:</label><br>
+                                <label for="correo">Correo electrónico:</label><br>
                                     <input type="email" id="correo" placeholder="Ej.: name@gmail.com"><br><br>
                                 <label for="tipop">Tipo de proyecto:</label><br>
                                     <select name="tipop" id="tipop">
@@ -105,22 +96,26 @@
                                         <option value="institucional">Institucional</option>
                                     </select><br><br>
                                 <label for="superficie">Superficie aproximada:</label><br>
-                                    <input type="number" min="100" placeholder="Mínimo: 100 m2" style="width:80%"><span>m<sup>2</sup></span><br><br>
+                                    <input type="number" id="superf" min="100" placeholder="Mínimo: 100 m2" style="width:80%"><span>m<sup>2</sup></span><br><br>
                                 <label for="obs">Observaciones:</label><br>
                                     <textarea name="obs" id="obs" cols="30" rows="10" placeholder="Apunte todo dato que considere necesario para una mejor cotización."></textarea>
                                 <input type="submit" value="Enviar">
                             </form>
                         </div>
                     </button>
-                </div>
-            </div>
-        </div>
+                </div> <!-- FIN COLUMNA 2: FORMULARIO DERECHO -->
+
+            </div> <!-- FIN CUERPO PRINCIPAL (BAJO ENCABEZADO) -->
+
+        </div> <!-- FIN COLUMNA DERECHA (ENCABEZADO + CONTENIDO + FORMULARIO) -->
+
     </div>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- INICIO PIE DE PÁGINA -->
     <div class="pie">
         <p><i>CV - Trabajo práctico curso FrontEnd - Matías F. Muñoz Galdeano - <ins>matiasfmunoz.93@gmail.com</ins> </i></p>
     </div>
+    <!-- FIN PIE DE PÁGINA -->
     
     <!-- JAVASCRIPT-->
     <script src="cv_mm.js"></script>
