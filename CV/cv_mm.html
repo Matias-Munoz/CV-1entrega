@@ -77,10 +77,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carrusel">
+                    <div class="galeria">
                         <h1 class="secciones">Portfolio</h1>
                         <div class="fila">
                             <!-- PORTFOLIO -->
+
 
                         </div>
                     </div>
@@ -88,11 +89,27 @@
                 <!-- FORMULARIO LATERAL DERECHO -->
                 <div class="form-der">
                     <button type="button" id="desplegable">
-                        <span style="writing-mode: vertical-lr">¡Presupuestá tu proyecto!</span>
+                        <span style="writing-mode: vertical-lr">¡Click aquí para presupuestar su proyecto!</span>
                         <div id="campos">
-                            <p>...gyututyutyutyutyututyutu.</p>
-                            <p>...gyututyutyutyutyututyutu.</p>
-                            <p>...gyututyutyutyutyututyutu.</p>
+                            <p>Por favor, complete el formulario y en breve un miembro de nuestro equipo se contactará con usted.</p><br>
+                            <form action="" method="post" target="_top">
+                                <label for="nombre">Nombre/Empresa:</label><br>
+                                    <input type="text" id="nombre" placeholder="Ingresar nombre de contacto"><br><br>
+                                <label for="correo" id="correo">Correo electrónico:</label><br>
+                                    <input type="email" id="correo" placeholder="Ej.: name@gmail.com"><br><br>
+                                <label for="tipop">Tipo de proyecto:</label><br>
+                                    <select name="tipop" id="tipop">
+                                        <option value="residencial">Residencial</option>
+                                        <option value="comercial">Comercial</option>
+                                        <option value="industrial">Industrial</option>
+                                        <option value="institucional">Institucional</option>
+                                    </select><br><br>
+                                <label for="superficie">Superficie aproximada:</label><br>
+                                    <input type="number" min="100" placeholder="Mínimo: 100 m2" style="width:80%"><span>m<sup>2</sup></span><br><br>
+                                <label for="obs">Observaciones:</label><br>
+                                    <textarea name="obs" id="obs" cols="30" rows="10" placeholder="Apunte todo dato que considere necesario para una mejor cotización."></textarea>
+                                <input type="submit" value="Enviar">
+                            </form>
                         </div>
                     </button>
                 </div>
@@ -102,7 +119,7 @@
 
     <!-- PIE DE PÁGINA -->
     <div class="pie">
-        <p><i>CV - Trabajo práctico curso FrontEnd - Matías Muñoz Galdeano</i></p>
+        <p><i>CV - Trabajo práctico curso FrontEnd - Matías F. Muñoz Galdeano - <ins>matiasfmunoz.93@gmail.com</ins> </i></p>
     </div>
     
     <!-- JAVASCRIPT-->

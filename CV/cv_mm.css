@@ -118,6 +118,9 @@ li {
 .acordeon:hover .acordeon-texto {
     display: block;
 }
+.galeria {                          /*PORTFOLIO (IMAGE GALLERY)*/
+    overflow-x: scroll;
+}
 
 /* ===FORMULARIO LATERAL DERECHO=== */
 .form-der {
@@ -133,22 +136,31 @@ li {
 #desplegable {
     display: flex;
     width: 100%;
-    background-color: red;
+    background-color: rgb(18, 92, 70);
     color: rgb(182, 230, 194);
     border-radius: 10px 0 0 10px;
     border: none;
     text-align: center;
+    padding-top: 20px;
+    padding-left: 10px;
 }
 #campos {
-    /*visibility: hidden; */
     width: 80%;
     height: 100%;
     margin-left: auto;
     margin-right: 0;
     display: none;
-    background-color: darkred;
+    background-color: rgb(18, 92, 70);
     color: rgb(182, 230, 194);
-    text-align: center;
+    padding: 5px;
+    text-align: left;
+    overflow: hidden;
+}
+#nombre, #obs, #correo, #tipop {
+    width: 100%;
+}
+#obs {
+    overflow-y: scroll;
 }
 
 /* ===PIE DE PÁGINA=== */
