@@ -1,0 +1,106 @@
+/*==> CSS RESPONSIVE CREADO SIGUIENDO EL MÉTODO FLEX-BOX VISTO EN W3SCHOOL */
+/*==> CONFIGUTACIONES GENERALES */
+* {
+    box-sizing: border-box;                                     /*De esta forma padding no distorcionará width final*/
+}
+body {
+    margin: 0;                                                  /*Para ocupar la pantalla en su totalidad*/
+    overflow-x: hidden;                                         /*Para evitar que, al reducir el ancho de pantalla aparezca scroll horizontal*/
+    background-color: gray;
+    font-family: 'Arimo', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', cursive;
+}
+li {
+    font-style: italic;
+}
+
+/*==> CONFIGURACIONES PARA LOS FLEX-CONTAINER PRINCIPALES */
+.fila {         /*==> Flex container general*/
+    display: flex;                                              /*Para poder generar columnas con diferente ancho*/
+}
+.col-izq {      /*==> Flex container: Dentro de .fila - Barra lateral izquierda*/
+    display: flex;
+    flex: 25%;                                                  /*Esta columna ocupará siempre un 25% del ancho de pantalla hasta:*/
+    max-width: 350px;                                           /*350px. Si el 25% de la pantalla es mayor a 350, el ancho quedará fijo en 25%*/
+    min-width: 200px;
+    background-image: linear-gradient(white, gray);
+    border-right: 5px solid rgb(67, 75, 14);
+}
+.col-der {      /*==> Flex container: Dentro de .fila - Área principal del website (Incluye encabezado, contenido y menú derecho)*/
+    display: flex;
+    flex-direction: column;                             
+    flex: 75%;
+    overflow: hidden;                                                 /*Esta columna ocupará siempre, como mínimo, un 75% del ancho de pantalla*/
+}
+.pie {          /*==> Flex container: Pie de página*/
+    bottom: 0;                                                  /*Estará siempre al final del sitio*/
+    position: sticky;                                           /*Será siempre visible pese al scroll*/
+    padding: 1px;
+    background-color: rgb(32, 48, 42);
+    color: white;
+    text-align: center;
+}
+.contenido { /*==> Flex container: Dentro de .col-der - Columna para el cuerpo principal del sitio*/
+    display: flex;
+    min-width: 50px;
+    
+    overflow: hidden;
+
+}
+.col-ppal {     /*==> Flex container: Dentro de .contenido - Columna para el contenido principal*/
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    overflow: hidden;
+    width: auto;                                          /*Esta sección ocupará siempre, como mínimo, un 80% del 75% de la pantalla*/
+    margin: 5px;                                     /*Sus elementos siempre se ordenaran de manera vertical*/
+    padding: 5px;
+}
+.col-form {     /*==> Flex container: Dentro de .contenido - Columna para el menú derecho (formulario)*/
+    
+    display: block;
+    float: left;                                                  /*Esta sección ocupará siempre, como máximo, un 20% del 75% de la pantalla*/
+    max-width: 300px;
+    min-width: 200px;
+    margin-left: 10px;
+    background-color: red;
+}
+
+/*==> CONFIGURACIONES PARA LOS FLEX-CONTAINER SECUNDARIOS */
+.encab {        /*==> Flex container: Dentro de .col-der - Fila para la foto y datos de perfil*/
+    display: flex;
+    width: 100%;
+    float: inline-start;                                        /*Todos los elementos siempre se alinearán sobre el borde izquierdo del container*/
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(176, 196, 176);
+}
+.drops {        /*==> Flex container: Dentro de .col-cont - Fila para los desplegables con datos laborales*/
+    width: 100%;
+    padding: 10px;
+    background-color: blueviolet;
+}
+.galeria {       /*==> Flex container: Dentro de .col-cont - Fila para la galería*/
+    flex: inherit;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    object-fit: inherit;
+    background-color: blue;
+}
+.formulario {   /*==> Flex container: Dentro de .col-form - Columna para los campos del formulario*/
+    border-radius: 10px 0 0 10px;
+    background-color: red;
+}
+
+/*==> CONFIGURACIONES PARA LOS FLEX-ITEMS */
+/*GALERIA*/
+.foto {
+    flex: 1 0 auto;
+    margin: 15px;
+    background-color: bisque;
+    width: 500px;
+    height: 500px;
+}

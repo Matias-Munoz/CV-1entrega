@@ -21,6 +21,10 @@ li {
 .fila {                             /*Clase creada para ordenar en columnas los flex-container*/
     display: flex;
 }
+.filaa {
+    display: flex;
+    flex-direction: column;
+}
 .izq {                              /*FLEX-CONTAINER: MENÚ LATERAL*/
     flex: 25%;
     max-width: 350px;
@@ -83,7 +87,9 @@ li {
 .ppal {
     flex: 80%;
     padding: 10px;
-    background-color: white;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
 }
 .secciones {
     color: rgb(109, 116, 16);
@@ -91,8 +97,9 @@ li {
 }
 .descripcion {
     width: 100%;
-    display: block;
-    flex-direction: column;
+    z-index: 0;
+    background-color: red;
+    padding: 10px;
 }
 .acordeon {                         /*ACORDEONES (DROPDOWNS)*/
     display: block;
@@ -142,7 +149,7 @@ div.epigrafe {
     flex: 20%;
     position: sticky;
     justify-content: stretch;
-    
+    display: flex;
     min-width: 5%;
     max-width: 25%;
     margin-top: 5px;
