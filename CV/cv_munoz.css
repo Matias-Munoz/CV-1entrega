@@ -6,7 +6,7 @@
 body {
     margin: 0;                                                  /*Para ocupar la pantalla en su totalidad*/
     overflow-x: hidden;                                         /*Para evitar que, al reducir el ancho de pantalla aparezca scroll horizontal*/
-    background-color: gray;
+    background-color: black;
     font-family: 'Arimo', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -17,55 +17,53 @@ li {
 }
 
 /*==> CONFIGURACIONES PARA LOS FLEX-CONTAINER PRINCIPALES */
-.fila {         /*==> Flex container general*/
+.fila {         /*==> Flex container general: incluye todo el sitio menos el pie*/
     display: flex;                                              /*Para poder generar columnas con diferente ancho*/
 }
 .col-izq {      /*==> Flex container: Dentro de .fila - Barra lateral izquierda*/
     display: flex;
-    flex: 25%;                                                  /*Esta columna ocupará siempre un 25% del ancho de pantalla hasta:*/
-    max-width: 350px;                                           /*350px. Si el 25% de la pantalla es mayor a 350, el ancho quedará fijo en 25%*/
-    min-width: 200px;
+    flex: 25%;                                                  /*Esta columna ocupará siempre un 25% del ancho de pantalla, pero:*/
+    max-width: 350px;                                           /*Si el 25% de la pantalla es mayor a 350px, el ancho quedará fijo en 350px*/
+    min-width: 250px;                                           /*Si el 25% de la pantalla es menor a 250px, el ancho quedará fijo en 250px*/
     background-image: linear-gradient(white, gray);
     border-right: 5px solid rgb(67, 75, 14);
+    padding: 10px;
 }
 .col-der {      /*==> Flex container: Dentro de .fila - Área principal del website (Incluye encabezado, contenido y menú derecho)*/
     display: flex;
-    flex-direction: column;                             
-    flex: 75%;
-    overflow: hidden;                                                 /*Esta columna ocupará siempre, como mínimo, un 75% del ancho de pantalla*/
+    flex: 75%;                                                  /*Esta columna ocupará siempre, como mínimo, un 75% del ancho de pantalla*/
+    flex-direction: column;                                     /*Los elementos siempre se ordenarán de manera vertical, de arriba a abajo*/
+    overflow: hidden;                                           /*No se podrá hacer scroll horizontal aunque la pantalla se achique*/ 
 }
 .pie {          /*==> Flex container: Pie de página*/
     bottom: 0;                                                  /*Estará siempre al final del sitio*/
-    position: sticky;                                           /*Será siempre visible pese al scroll*/
+    position: sticky;                                           /*Será siempre visible, pese al scroll*/
     padding: 1px;
     background-color: rgb(32, 48, 42);
     color: white;
     text-align: center;
 }
-.contenido { /*==> Flex container: Dentro de .col-der - Columna para el cuerpo principal del sitio*/
+.contenido {    /*==> Flex container: Dentro de .col-der - Columna para el cuerpo principal del sitio*/
     display: flex;
-    min-width: 50px;
-    
-    overflow: hidden;
-
+    min-width: 50px;    
+    overflow: hidden;                                           /*No se podrá hacer scroll horizontal aunque la pantalla se achique*/
 }
 .col-ppal {     /*==> Flex container: Dentro de .contenido - Columna para el contenido principal*/
     display: flex;
-    flex-direction: column;
-    flex: auto;
-    overflow: hidden;
-    width: auto;                                          /*Esta sección ocupará siempre, como mínimo, un 80% del 75% de la pantalla*/
-    margin: 5px;                                     /*Sus elementos siempre se ordenaran de manera vertical*/
-    padding: 5px;
+    flex: 75%;
+    flex-direction: column;                                     /*Sus elementos siempre se ordenaran de manera vertical*/
+    width: auto;                                                /*El ancho de esta sección será variable*/
+    overflow: hidden;                                           /*No se podrá hacer scroll horizontal aunque la pantalla se achique*/
 }
 .col-form {     /*==> Flex container: Dentro de .contenido - Columna para el menú derecho (formulario)*/
-    
     display: block;
-    float: left;                                                  /*Esta sección ocupará siempre, como máximo, un 20% del 75% de la pantalla*/
-    max-width: 300px;
-    min-width: 200px;
-    margin-left: 10px;
+    flex: 25%;
+    float: left;                                                
+    max-width: 25%;     /*300px;*/
+    min-width: 5%;      /*200px;*/
+    padding: 10px;
     background-color: red;
+    /*visibility: hidden;*/
 }
 
 /*==> CONFIGURACIONES PARA LOS FLEX-CONTAINER SECUNDARIOS */
