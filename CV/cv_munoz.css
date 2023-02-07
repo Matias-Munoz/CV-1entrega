@@ -87,8 +87,7 @@ li {
     display: block;
     width: 100%;
     float: inline-start;                                        /*Todos los elementos siempre se alinearán sobre el borde izquierdo del container*/
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 10px 50px;
     background-color: rgb(176, 196, 176);
 }
 
@@ -228,6 +227,92 @@ div.epigrafe {
     overflow-y: scroll;
 }
 
+/* MEDIA QUERY DARK MODE */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
+    .col-izq {      /*==> Flex container: Dentro de .fila - Barra lateral izquierda*/
+        background-image: linear-gradient(darkgray, black);
+        border-color: rgb(160, 201, 169);
+    }
+    .caja-contacto {
+        background-color: black;
+        outline: 2px solid rgb(222, 236, 218);
+        color: white;
+    }
+    .encab {
+        background-color: rgb(9, 15, 11);
+        color: white;
+    }
+    .drops {
+        background-color: black;
+    }
+    .acordeon {
+        background-color: rgb(58, 58, 58);
+        box-shadow: none;
+    }
+    .col-form {
+        background-color: black;
+    }
+    .galeria {
+        background-color: black;
+        color: white;
+    }
+    .foto {
+        background-color: rgb(36, 36, 36);
+    }
+}
+
 /* MEDIA QUERY PARA SMARTPHONE */
-@media screen and (max-width: 600px) {
-   
+@media screen and (max-width: 880px) {
+    .col-izq {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .encab {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-end;
+        text-align: right;
+    }
+    ul {
+        text-align: right;
+        list-style-type: none;
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .encab {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+    }
+    .fotoperfil {
+        width: 300px;
+        height: 300px;
+        margin: 15px 0 0 0;
+        padding: 0;
+    }
+    ul {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    div.galeria {
+        margin: 5px;
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: ;  
+    }
+    .foto {
+        height: 400px;
+        width: auto;
+        margin: 10px;
+    }    
+}
