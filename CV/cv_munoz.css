@@ -58,12 +58,11 @@ li {
 .col-form {     /*==> Flex container: Dentro de .contenido - Columna para el menú derecho (formulario)*/
     display: flex;
     float: right;
-    max-width: 25%;     /*300px;*/
-    min-width: 15%;      /*200px;*/
+    width: auto;
+    min-width: 20px;    
     margin: 0;
-    padding: 10px;
-    background-color: pink;
-    /*visibility: hidden;*/
+    padding: 10px 0 10px 5px;
+    background-color: white;
 }
 
 /*==> CONFIGURACIONES PARA LOS FLEX-CONTAINER SECUNDARIOS */
@@ -113,8 +112,7 @@ li {
 .drops {        /*==> Flex container: Dentro de .col-cont - Fila para los desplegables con datos laborales*/
     width: 100%;
     padding: 10px;
-    background-color: white;
-    cursor: pointer;                                            /*Cuando el mouse pase por arriba, el ícono cambiará de flecha a mano*/
+    background-color: white;    
 }
 .galeria {       /*==> Flex container: Dentro de .col-cont - Fila para la galería*/
     flex: inherit;
@@ -137,6 +135,7 @@ li {
     width: auto;
     height: auto;
     opacity: 0.8;
+    transition: all 50ms;
 }
 div.galeria {
     margin: 5px;
@@ -147,7 +146,9 @@ div.galeria {
 }
 div.foto:hover {
     opacity: 1;
-    border: 10px solid gray; 
+    border-style: none solid solid none;
+    border: 1px solid darkgray;
+    box-shadow: 10px 10px 50px darkgray; 
 }
 div.epigrafe {
     padding: 15px;
@@ -163,6 +164,8 @@ div.epigrafe {
     box-shadow: 2px 2px 5px darkgray;
     color: white;
     border-radius: 5px 20px 20px;
+    cursor: pointer;                                            /*Cuando el mouse pase por arriba, el ícono cambiará de flecha a mano*/
+    transition: all 300ms;
 }
 .acordeon-texto {
     display: none;
@@ -179,17 +182,19 @@ div.epigrafe {
     display: block;
 }
 
+/*FORMULARIO*/
 
 .boton-form {
     writing-mode: vertical-lr;
 }
 #desplegable {
     display: flex;
-    right: 0;
-    top: 0;
-    position: fixed;    
-    background-color: blue;
-    color: rgb(182, 230, 194);
+    right: 0;    
+    position: sticky;
+    width: 100%;    
+    background-color: rgb(67, 97, 93);
+    color: white;
+    font-family: 'comfortaa', cursive;
     border-radius: 10px 0 0 10px;
     border: none;
     text-align: center;
@@ -198,13 +203,16 @@ div.epigrafe {
     padding-left: 10px;
 }
 #campos {
-    width: 80%;
+    width: 220px;
     height: 100%;
     margin-left: auto;
     margin-right: 0;
     display: none;
-    background-color: rgb(18, 92, 70);
-    color: rgb(182, 230, 194);
+    float: right;
+    flex-flow: column wrap;
+    background-color: rgb(63, 77, 75);
+    color: white;
+    font-family: 'comfortaa', cursive;
     padding: 5px;
     text-align: left;
     overflow: hidden;
@@ -221,37 +229,5 @@ div.epigrafe {
 }
 
 /* MEDIA QUERY PARA SMARTPHONE */
-@media screen and (max-width: 480px) {
-    .fila {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .izq {
-        display: none;
-    }
-    .encab {
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-    }
-    .fotoperfil {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-        margin-top: 20px;
-        display: block;
-    }
-    ul {
-        padding: 0;
-        list-style-type: none;
-        text-align: center;
-    }
-    .secciones {
-        text-align: center;
-    }
-}
+@media screen and (max-width: 600px) {
+   
